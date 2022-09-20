@@ -30,8 +30,8 @@ const publicRoutes = [
     }
 ]
 
-const priateRoutes = [
+const privateRoutes = [
 
 ]
 
-export { publicRoutes, priateRoutes }
+export { publicRoutes, privateRoutes }
