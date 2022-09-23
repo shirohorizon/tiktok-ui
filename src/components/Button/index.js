@@ -1,17 +1,67 @@
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 import styles from './Button.module.scss';
 
 
 const cx = classNames.bind(styles);
 
-function Button({ children }) {
+function Button({
+    to,
+    href,
+    primary = false,
+    outline = false,
+    text = false,
+    rounded = false,
+    disabled = false,
+    small = false,
+    large = false,
+    leftIcon = false,
+    rightIcon = false,
+    children,
+    className,
+    onClick,
+    ...passProps
+}) {
 
-    let Type = 'button';
+    let Comp = 'button';
+    const props = {
+        onClick,
+        ...passProps
+    };
+
+    if (to) {
+        props.to = to;
+        Comp = Link;
+    } else if (href) {
+        props.href = href;
+        Comp = 'a';
+    }
+
+    if (disabled) {
+        for (const key in props) {
+            key.startsWith('on') && typeof key === 'function' &&
+                delete props['key']
+        }
+    }
+
+    const classes = cx('wrapper', {
+        primary,
+        outline,
+        small,
+        large,
+        text,
+        disabled,
+        rounded,
+        [className]: className
+    });
+
 
     return (
-        <Type >
-            {children}
-        </Type>
+        <Comp className={classes} {...props}>
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={cx('title')}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+        </Comp>
     );
 }
 
