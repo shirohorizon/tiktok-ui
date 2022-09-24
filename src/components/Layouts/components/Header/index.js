@@ -1,16 +1,33 @@
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSignIn, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleQuestion, faCircleXmark, faEarthAsia, faEllipsisVertical, faKeyboard, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import images from '~/assets/images';
 import styles from './Header.module.scss';
-import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
+import AccountItem from '~/components/AccountItem';
+import PopperMenu from '~/components/Popper/PopperMenu';
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        title: 'English'
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Feedback and help',
+        to: '/feedback'
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'Keyboard shortcut'
+    }
+]
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -30,9 +47,9 @@ function Header() {
                 render={attrs => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
-                            <h4 className={cx('search-title')}>
-                                Account
-                            </h4>
+                            <h4 className={cx('search-title')}>Accounts</h4>
+                            <AccountItem />
+                            <AccountItem />
                             <AccountItem />
                             <AccountItem />
                             <AccountItem />
@@ -63,6 +80,13 @@ function Header() {
                 <Button primary >
                     Log in
                 </Button>
+                <PopperMenu
+                    items={MENU_ITEMS}
+                >
+                    <button className={cx('more-button')}>
+                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </button>
+                </PopperMenu>
             </div>
         </div>
     </header>);

@@ -63,15 +63,6 @@
     }
 }
 
-.search-title {
-    height: 30px;
-    padding: 5px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-}
-
 .clear,
 .loading {
     position: absolute;
@@ -105,4 +96,20 @@
 .actions {
     display: flex;
     align-items: center;
+}
+
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.more-button {
+    margin-left: 16px;
+    padding: 0px 8px;
+    background-color: transparent;
+    font-size: 1.6rem;
 }
