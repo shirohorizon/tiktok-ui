@@ -100,8 +100,9 @@
 }
 
 .actions {
-    display    : flex;
-    align-items: center;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
 
 .search-title {
@@ -124,7 +125,16 @@
 .action-btn {
     color           : #161823;
     font-size       : 2.2rem;
+    width           : 32px;
+    height          : 32px;
     background-color: transparent;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.action-btn+.action-btn {
+    margin-left: 16px;
 }
 
 .user-avatar {
@@ -132,7 +142,7 @@
     height               : 32px;
     object-fit           : cover;
     border-radius        : 50%;
-    margin-left          : 12px;
+    margin-left          : 24px;
     cursor               : pointer;
     -webkit-border-radius: 50%;
     -moz-border-radius   : 50%;

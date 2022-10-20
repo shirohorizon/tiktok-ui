@@ -1,59 +1,64 @@
 .wrapper {
-    font-size: 1.6rem;
-    font-weight: 600;
-    min-width: 100px;
-    padding: 9px 16px;
-    display: flex;
-    justify-content: center;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: var(--white);
-    border: 1px solid transparent;
+    font-family          : 'ProximaNova', sans-serif;
+    font-size            : 1.6rem;
+    font-weight          : 600;
+    min-width            : 100px;
+    padding              : 9px 16px;
+    display              : flex;
+    justify-content      : center;
+    border-radius        : 4px;
+    cursor               : pointer;
+    background-color     : var(--white);
+    border               : 1px solid transparent;
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    + .wrapper {
+    -moz-border-radius   : 4px;
+    -ms-border-radius    : 4px;
+    -o-border-radius     : 4px;
+
+    +.wrapper {
         margin-left: 16px;
     }
 
     // Disable
     &.disabled {
         pointer-events: none;
-        opacity: 0.5;
-        user-select: none;
+        opacity       : 0.5;
+        user-select   : none;
     }
 }
 
 // Button style
 .rounded {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(22, 24, 35, 0.12);
-    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-width : 1px;
+    border-style : solid;
+    border-color : rgba(22, 24, 35, 0.12);
+    box-shadow   : 0 2px 8px rgb(0 0 0 / 6%);
     border-radius: 999px;
+
     &:hover {
-        border-color: rgba(22, 24, 35, 0.2);
+        border-color    : rgba(22, 24, 35, 0.2);
         background-color: rgba(255, 255, 255, 1);
     }
 }
+
 .primary {
     background-color: var(--primary);
-    color: var(--white);
-    border-color: transparent;
+    color           : var(--white);
+    border-color    : transparent;
+
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+        background  : linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
         border-color: transparent;
     }
 }
 
 .outline {
-    color: var(--primary);
+    color       : var(--primary);
     border-color: currentColor;
 
     &:hover {
         background-color: rgba(254, 44, 85, 0.06);
-        border-color: currentColor;
+        border-color    : currentColor;
     }
 }
 
@@ -66,17 +71,17 @@
 // Button size
 .small {
     min-width: 88px;
-    padding: 3px 16px;
+    padding  : 3px 16px;
 }
 
 .large {
-    padding: 14px 16px;
-    width: 100%;
-    font-size: 1.8rem;
+    padding    : 14px 16px;
+    width      : 100%;
+    font-size  : 1.8rem;
     line-height: 2.5rem;
 }
 
-.title + .icon,
-.icon + .title {
+.title+.icon,
+.icon+.title {
     margin-left: 8px;
 }
