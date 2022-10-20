@@ -15,6 +15,7 @@
     border       : 1.5px solid transparent;
 
     input {
+        font-family     : var(--font-family);
         height          : 100%;
         font-size       : 1.6rem;
         color           : var(--black);
@@ -79,7 +80,7 @@
     }
 }
 
-.sreach-btn {
+.search-btn {
     width                     : var(--search-button-width);
     height                    : 100%;
     border-top-right-radius   : var(--search-border-radius);

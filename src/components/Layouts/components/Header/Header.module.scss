@@ -25,7 +25,9 @@
     padding        : 0 var(--default-layout-padding);
 }
 
-
+.logo-link {
+    display: flex;
+}
 
 .actions {
     display        : flex;

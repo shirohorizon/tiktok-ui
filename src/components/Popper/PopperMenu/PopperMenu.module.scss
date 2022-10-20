@@ -1,6 +1,7 @@
 // Menu Wrapper
 .list-item {
-    width: 224px;
+    width   : 224px;
+    overflow: overlay;
 
     .menu-item {
         margin: 0;
