@@ -1,14 +1,17 @@
 .wrapper {
-    display: flex;
-    flex-flow: column;
+    display        : flex;
+    flex-flow      : column;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 }
+
 .container {
-    width: var(--default-layout-width);
+    width  : var(--default-layout-width);
     display: flex;
     padding: 0 var(--default-layout-padding);
 }
+
 .content {
-    flex: 1;
+    padding-top: var(--default-layout-header-height);
+    flex       : 1;
 }

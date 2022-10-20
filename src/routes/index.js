@@ -8,30 +8,29 @@ import Search from '~/pages/Search';
 const publicRoutes = [
     {
         path: '/',
-        component: Home
+        component: Home,
     },
     {
         path: '/following',
-        component: Following
+        component: Following,
     },
     {
-        path: '/profile',
-        component: Profile
+        path: '/@:nickname',
+        component: Profile,
     },
+
     {
         path: '/upload',
         component: Upload,
-        layout: HeaderOnly
+        layout: HeaderOnly,
     },
     {
         path: '/search',
         component: Search,
-        layout: null
-    }
-]
+        layout: null,
+    },
+];
 
-const privateRoutes = [
+const privateRoutes = [];
 
-]
-
-export { publicRoutes, privateRoutes }
+export { publicRoutes, privateRoutes };
