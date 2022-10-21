@@ -1,9 +1,9 @@
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classNames from "classnames/bind";
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
-
-import styles from './PopperMenu.module.scss'
+import styles from './PopperMenu.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -18,4 +18,9 @@ function Header({ title, onBack }) {
     );
 }
 
-export default Header;    
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    onBack: PropTypes.func.isRequired,
+};
+
+export default Header;
