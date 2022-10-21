@@ -6,9 +6,10 @@
 }
 
 .container {
-    width  : var(--default-layout-width);
-    display: flex;
-    padding: var(--default-layout-header-height) var(--default-layout-padding) 0;
+    width    : var(--default-layout-width);
+    max-width: 100%;
+    display  : flex;
+    padding  : var(--default-layout-header-height) 0 0;
 }
 
 .content {
