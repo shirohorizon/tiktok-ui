@@ -1,4 +1,33 @@
 .wrapper {
-    width  : 356px;
-    padding: 20px 0 26px 8px;
+    position  : fixed;
+    top       : var(--default-layout-header-height);
+    left      : calc((100% - var(--default-layout-width))/2);
+    width     : 348px;
+    padding   : 20px 0 26px 8px;
+    height    : calc(100vh - var(--default-layout-header-height));
+    overflow-y: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    border-radius: 0px;
+    width        : 6px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    border-radius   : 4px;
+    background-color: transparent;
+
+}
+
+.wrapper:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+.container::-webkit-scrollbar-track {
+    border-radius        : 0px;
+    background-color     : rgba(0, 0, 0, 0);
+    -webkit-border-radius: 0px;
+    -moz-border-radius   : 0px;
+    -ms-border-radius    : 0px;
+    -o-border-radius     : 0px;
 }

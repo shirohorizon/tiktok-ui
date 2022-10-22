@@ -1,5 +1,5 @@
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import HeadlessTippy from '@tippyjs/react/headless';
+import Tippy from '@tippyjs/react/headless';
 import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -60,7 +60,7 @@ function Search() {
     };
 
     return (
-        <HeadlessTippy
+        <Tippy
             visible={showResult && searchResult.length > 0}
             interactive
             appendTo={() => document.body}
@@ -96,7 +96,7 @@ function Search() {
                     <SearchIcon />
                 </button>
             </div>
-        </HeadlessTippy>
+        </Tippy>
     );
 }
 

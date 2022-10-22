@@ -5,7 +5,6 @@ import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
-
 function MenuItem({ to, title, icon, activeIcon }) {
     return (
         <NavLink className={({ isActive }) => cx('menu-item', { active: isActive })} to={to} end>

@@ -1,4 +1,5 @@
 .wrapper {
+
     display        : flex;
     flex-flow      : column;
     justify-content: center;
@@ -12,6 +13,11 @@
     padding  : var(--default-layout-header-height) 0 0;
 }
 
+.left-content {
+    width: 356px;
+}
+
 .content {
+
     flex: 1;
 }

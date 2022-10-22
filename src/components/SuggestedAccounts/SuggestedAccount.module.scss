@@ -1,0 +1,92 @@
+.wrapper {
+    margin-top: 8px;
+    padding   : 16px 0;
+    position  : relative;
+
+
+    &::before {
+        content          : "";
+        position         : absolute;
+        left             : 8px;
+        right            : 8px;
+        top              : 0;
+        height           : 1px;
+        background       : rgba(22, 24, 35, .12);
+        -webkit-transform: scaleY(0.5);
+        -moz-transform   : scaleY(0.5);
+        -ms-transform    : scaleY(0.5);
+        transform        : scaleY(0.5);
+    }
+}
+
+.label {
+    padding      : 0 8px;
+    margin-bottom: 8px;
+    font-size    : 1.4rem;
+    line-height  : 20px;
+    font-family  : ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    color        : rgba(22, 24, 35, .75);
+    font-weight  : 600;
+}
+
+.account-item {
+    display    : flex;
+    padding    : 8px;
+    align-items: center;
+    height     : 48px;
+    cursor     : pointer;
+
+    border-radius: 4px;
+    transition   : all 0.2s ease;
+
+    &:hover {
+        background: rgba(22, 24, 35, .03);
+    }
+}
+
+.avatar {
+    width                : 32px;
+    height               : 32px;
+    border-radius        : 50%;
+    object-fit           : cover;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+}
+
+.item-info {
+    flex       : 1;
+    margin-left: 12px;
+}
+
+.nickname {
+    font-family: 'SofiaPro';
+    font-size  : 1.6rem;
+    line-height: 2.2rem;
+    height     : 20px;
+}
+
+.check {
+    margin-left      : 4px;
+    font-size        : 1.4rem;
+    color            : #20d5ec;
+    transform        : translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform   : translateY(-4px);
+    -ms-transform    : translateY(-4px);
+    -o-transform     : translateY(-4px);
+}
+
+.name {
+    font-family: var(--font-family);
+    font-size  : 1.2rem;
+    line-height: 1.5rem;
+}
+
+.more-btn {
+    font-size  : 1.4rem;
+    color      : #fe2c55;
+    font-weight: 600;
+    padding    : 8px;
+}
